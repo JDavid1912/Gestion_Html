@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Modificar Departamento</legend>
+        <div id="modificarContainer">
+            <label for="nombreModificar">Nombre:</label>
+            <input type="text" id="nombreModificar" placeholder="Escribe el nuevo nombre" value="">
+        </div>
+        <br>
+        <button class="modificar" onclick="modificar()">Guardar Cambios</button>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Consultar Departamento</legend>
+        <div id="mostrarContainer">
+            <!-- Aquí se mostrará automáticamente el nombre actual -->
+            <p>Nombre actual: <span id="nombreMostrar">Ingeniería de Sistemas</span></p>
+        </div>
+    </fieldset>
+
+    <ul class="dropdown-menu">
+        <a href="../Backend/index.html">
+          <button>Regresar</button>
+      </a>
+</html>

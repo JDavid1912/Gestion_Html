@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estudi.css">
+</head>
+<body>
+    <h1>Sistema de Gestión Estudiantil</h1>
+
+    <fieldset>
+        <legend>Estudiante - Departamento</legend>
+        
+        <div>
+            <h3>Consultar Estudiante en Departamento</h3>
+            <label for="consultaEstDepto">ID Estudiante:</label>
+            <input type="text" id="consultaEstDepto">
+            <button onclick="consultarEstudianteDepto()">Consultar</button>
+            <div id="resultadoConsultaEstDepto" class="resultado"></div>
+        </div>
+        
+        <div>
+            <h3>Modificar Estudiante de Departamento</h3>
+            <label for="idEstModDepto">ID Estudiante:</label>
+            <input type="text" id="idEstModDepto"><br>
+            <label for="nuevoDepto">Nuevo Departamento:</label>
+            <input type="text" id="nuevoDepto">
+            <button onclick="modificarEstudianteDepto()">Modificar</button>
+            <div id="resultadoModEstDepto" class="resultado"></div>
+        </div>
+    </fieldset>
+
+ 
+    <fieldset>
+        <legend>Estudiante - Asignatura</legend>
+        
+        <div>
+            <h3>Adicionar Estudiante a Asignatura</h3>
+            <label for="idEstAddAsig">ID Estudiante:</label>
+            <input type="text" id="idEstAddAsig"><br>
+            <label for="codAsignatura">Código Asignatura:</label>
+            <input type="text" id="codAsignatura">
+            <button onclick="adicionarEstudianteAsignatura()">Adicionar</button>
+            <div id="resultadoAddEstAsig" class="resultado"></div>
+        </div>
+        
+        <div>
+            <h3>Consultar Estudiante en Asignatura</h3>
+            <label for="consultaEstAsig">ID Estudiante:</label>
+            <input type="text" id="consultaEstAsig">
+            <button onclick="consultarEstudianteAsignatura()">Consultar</button>
+            <div id="resultadoConsultaEstAsig" class="resultado"></div>
+        </div>
+        
+        <div>
+            <h3>Modificar Estudiante en Asignatura</h3>
+            <label for="idEstModAsig">ID Estudiante:</label>
+            <input type="text" id="idEstModAsig"><br>
+            <label for="asigActual">Asignatura Actual:</label>
+            <input type="text" id="asigActual"><br>
+            <label for="asigNueva">Asignatura Nueva:</label>
+            <input type="text" id="asigNueva">
+            <button onclick="modificarEstudianteAsignatura()">Modificar</button>
+            <div id="resultadoModEstAsig" class="resultado"></div>
+        </div>
+    </fieldset>
+    <ul class="dropdown-menu">
+        <a href="../Backend/index.html">
+          <button>Regresar</button>
+      </a>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asignaturas</title>
+    <link rel="stylesheet" href="EstiloAsig.css">
+    <script src="CodAsig.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Asignaturas</h1>
+        <button onclick="showAddSubject()">Adicionar Asignatura</button>
+        <button onclick="listSubjects()">Consultar Asignaturas</button>
+
+        <div id="addSubjectForm" style="display: none; margin-top: 5px;">
+            <input type="text" id="subjectName" placeholder="Nombre de la asignatura">
+            <button onclick="addSubject()">Adicionar</button>
+        </div>
+
+        <div id="modifySubjectForm" style="display: none; margin-top: 5px;">
+            <input type="number" id="subjectIndex" placeholder="Índice de la asignatura">
+            <input type="text" id="newSubjectName" placeholder="Nuevo nombre de la asignatura">
+            <button onclick="modifySubject()">Modificar</button>
+        </div>
+
+        <div class="subject-list" id="subjectList">
+            <h2>Lista de Asignaturas</h2>
+            <ul id="subjects"></ul>
+        </div>
+    </div>
+    <ul class="dropdown-menu">
+        <a href="../Backend/index.html">
+          <button>Regresar</button>
+      </a>
+</body>
+</html>
