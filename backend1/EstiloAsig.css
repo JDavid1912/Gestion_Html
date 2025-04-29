@@ -4,7 +4,7 @@ body {
 }
 
 fieldset {
-    border: 2px solid #333;
+    border: 3px solid #ac1b1b;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
@@ -34,17 +34,7 @@ button {
     cursor: pointer;
 }
 
-.agregar {
-    background-color: #4CAF50;
-    color: white;
-}
-
 .modificar {
     background-color: #2196F3;
-    color: white;
-}
-
-.mostrar {
-    background-color: #FF9800;
     color: white;
 }
