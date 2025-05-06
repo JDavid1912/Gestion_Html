@@ -3,12 +3,12 @@ var cors = require("cors");
 var serverless = require ('serverless-http');
 var port = process.env.PORT || 5000;
 var app = express();
-var estudiantesroutes = require("../../backend1/routes/estudiantesroutes.js");
+var estudiantesroutes = require("../../backend1/departamento.js");
 app.use(express.json());
 app.use(cors());
  
 var router = express.Router();
-router.use ("/estudiantes",estudiantesroutes);
+router.use ("/a",estudiantesroutes);
  
 var handler = app.use ('/.netlify/functions',router);
 exports.handler = serverless (app);
