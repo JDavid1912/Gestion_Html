@@ -1,16 +1,16 @@
 function agregarEstudianteDepartamento() {
-    const studentId = document.getElementById('idEstAddDep').value;
-    const departmentId = document.getElementById('codDepartamento').value;
-    const resultadoDiv = document.getElementById('resultadoAddEstDep');
+    const estudentId = document.getElementById('idEstAddDep').value;
+    const departmentoId = document.getElementById('codDepartamento').value;
 
     const raw = JSON.stringify({
-        studentId: studentId,
-        departmentId: departmentId
+        "studentId":document.getElementById("estudentId").value,
+        "departmentoId":document.getElementById("departmentoId").value
     });
 
-    const myHeaders = new Headers({
-        "Content-Type": "application/json"
-    });
+    const myHeaders = new Headers()
+        myHeaders.append("Content-Type","application/json")
+        event.preventDefault()
+    };
 
     const requestOptions = {
         method: 'POST',
@@ -19,18 +19,7 @@ function agregarEstudianteDepartamento() {
         redirect: 'follow'
     };
 
-    fetch('http://localhost:3000/addStudentToDepartment', requestOptions)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Error al agregar el estudiante al departamento');
-            }
-        })
-        .then(result => {
-            resultadoDiv.innerHTML = `<p>${result.status}</p>`;
-        })
-        .catch(error => {
-            resultadoDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
-        });
-}
+    fetch('https://backend1.netlify.app/.netlify/functions/estudiantes', requestOptions)
+        .then((response) => response.textContent())
+        .then((result) => console.log(result))
+        .catch((error) => console.log('error', error));
