@@ -5,7 +5,7 @@ function consultarEstudianteDepto() {
     const idEstudiante = document.getElementById('consultaEstDepto').value;
     const resultadoDiv = document.getElementById('resultadoConsultaEstDepto');
 
-    // Lógica de consulta (ejemplo)
+    
     resultadoDiv.textContent = `Consulta realizada para el estudiante con ID: ${idEstudiante}`;
 }
 
@@ -25,9 +25,25 @@ function adicionarEstudianteAsignatura() {
     const codAsignatura = document.getElementById('codAsignatura').value;
     const resultadoDiv = document.getElementById('resultadoAddEstAsig');
 
-    // Aquí deberías agregar la lógica para asignar al estudiante una asignatura
-    resultadoDiv.textContent = `Estudiante ${idEstudiante} adicionado a la asignatura ${codAsignatura}`;
-}
+   
+    }
+    const raw = JSON.stringify({
+    "idEstudiante": document.getElementById("id").value,
+    "codAsignatura": document.getElementById("codAsignatura").value 
+
+    })
+    let requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    
+    };
+    fetch('https://backend1.netlify.app/.netlify/functions/estudiantes', requestOptions)
+        .then(response => console.log(response.status))
+        .then((result) => console.log(result))
+        .catch(error => console.log('error', error));
+
 
 
 function consultarEstudianteAsignatura() {
