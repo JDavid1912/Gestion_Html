@@ -19,7 +19,7 @@ function agregarEstudianteDepartamento() {
         redirect: 'follow'
     };
 
-    fetch('https://backend1.netlify.app/.netlify/functions/estudiantes', requestOptions)
+    fetch('url', requestOptions)
         .then((response) => response.textContent())
         .then((result) => console.log(result))
         .catch((error) => console.log('error', error));
