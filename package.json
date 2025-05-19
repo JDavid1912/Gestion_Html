@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "firebase": "^11.7.3",
+    "firebase-admin": "^13.4.0",
+    "nodemon": "^3.1.10",
+    "serveless": "^0.0.2",
+    "serverless-http": "^3.2.0"
+  },
+  "name": "gestion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDavid1912/https---github.com-JDavid1912-Arquitecture-of-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JDavid1912/https---github.com-JDavid1912-Arquitecture-of-system/issues"
+  },
+  "homepage": "https://github.com/JDavid1912/https---github.com-JDavid1912-Arquitecture-of-system#readme",
+  "devDependencies": {}
+}
