@@ -1,0 +1,13 @@
+.contenido {
+  display: flex;
+  align-items: center;
+}
+
+.contenido img {
+  max-width: 200px; /* Ajusta el tamaño según necesites */
+  margin-right: 20px;
+}
+
+.contenido .texto {
+  flex: 1;
+}
