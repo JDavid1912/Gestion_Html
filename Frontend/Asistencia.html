@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistencia</title>
+     <link rel="stylesheet" href="asistencia.css">
+     <script src="asistencia.js"></script>
 </head>
 <body>
     <ul class="dropdown-menu">
         <a href="../index.html">
           <button>Regresar</button>
-      </a>
-    
+        </a>
+    </ul>
+
+    <h2>Consultar Asistencia</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha</th>
+                <th>Asistencia</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí irán los registros de asistencia -->
+            <tr>
+                <td>Juan Pérez</td>
+                <td>2025-05-26</td>
+                <td>Presente</td>
+                <td>
+                    <button>Modificar</button>
+                </td>
+            </tr>
+            <!-- Más filas según los datos -->
+        </tbody>
+    </table>
+
+    <h2>Modificar Asistencia</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"><br><br>
+        <label for="asistencia">Asistencia:</label>
+        <select id="asistencia" name="asistencia">
+            <option value="Presente">Presente</option>
+            <option value="Ausente">Ausente</option>
+            <option value="Tarde">Tarde</option>
+        </select><br><br>
+        <button type="submit">Guardar Cambios</button>
+    </form>
 </body>
 </html>
